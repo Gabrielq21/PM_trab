@@ -14,7 +14,7 @@ interface EndPoints {
     fun LoginCreate(@Field("username") username: String, @Field("password") password: String): Call<LoginOutputPost>
     @FormUrlEncoded
     @POST("myslim/api/ticket/create")
-    fun create(@Field("username") username: String, @Field("tipo") tipo: String, @Field("texto") texto: Editable, @Field("lat") lat: String, @Field("lon") lon: String, @Field("foto") foto: String): Call<TicketOutputPost>
+    fun create(@Field("username") username: String, @Field("tipo") tipo: String, @Field("texto") texto: Editable, @Field("lat") lat: String, @Field("lon") lon: String): Call<TicketOutputPost>
     @GET("/myslim/api/markers")
     fun getMarkers(): Call<List<Ticket>>
     @GET("/myslim/api/select/{id}")

@@ -14,6 +14,18 @@
     <string name="fieldpasswordemptylabel">Parameter Password is Empty</string>
     <string name="loginincorrectlabel">Login Failed</string>
     <string name="logincorrectlabel">Login Successful</string>
+    <string name="markerincorrectlabel">Marker Inserido</string>
+    <string name="markercorrectlabel">Marker Inserido</string>
 
 
+
+
+
+
+    <string name="selected_item">Selected item:</string>
+    <string-array name="Types">
+        <item>Obras</item>
+        <item>Acidente</item>
+        <item>Outro</item>
+    </string-array>
 </resources>

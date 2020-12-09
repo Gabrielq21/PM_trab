@@ -3,6 +3,7 @@
     package="ipvc.estg.pm_trab">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pm_trab">
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".AddMarker"></activity>
+        <activity android:name=".MapActivity" />
         <activity android:name=".UpdateNote" />
         <activity
             android:name=".AddNote"
