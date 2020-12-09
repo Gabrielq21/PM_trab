@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
         else {
             val request = ServiceBuilder.buildService(EndPoints::class.java)
-            val call = request.postTest(
+            val call = request.LoginEnter(
                 username,
                 password
             )
@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val request = ServiceBuilder.buildService(EndPoints::class.java)
-        val call = request.postcreate(
+        val call = request.LoginCreate(
             username,
             password
         )

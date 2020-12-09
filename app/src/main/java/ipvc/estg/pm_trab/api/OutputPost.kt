@@ -9,7 +9,7 @@ data class LoginOutputPost(
 data class TicketOutputPost(
     val success: Boolean
 )
-data class Marker(
+data class Ticket(
     val id: Int,
     val texto: String,
     val foto: String,
@@ -18,5 +18,4 @@ data class Marker(
     val lat : String,
     val lon : String,
     val username : String
-
 )
