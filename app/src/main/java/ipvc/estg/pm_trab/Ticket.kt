@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import ipvc.estg.pm_trab.api.EndPoints
 import ipvc.estg.pm_trab.api.ServiceBuilder
 import ipvc.estg.pm_trab.api.Problema
@@ -69,12 +70,12 @@ class Ticket : AppCompatActivity() {
                             editlonView.setText(note.lon)
                             edittipoView.setText(note.tipo)
 
-                            val local = findViewById<Button>(R.id.btn_local)
+                            val local = findViewById<FloatingActionButton>(R.id.btn_local)
                             local.setOnClickListener {
                                 editlatView.setText(lat)
                                 editlonView.setText(lon)
                             }
-                            val type = findViewById<Button>(R.id.btn_type)
+                            val type = findViewById<FloatingActionButton>(R.id.btn_type)
                             type.setOnClickListener {
                                 edittipoView.setText(tipo)
                             }
@@ -91,13 +92,9 @@ class Ticket : AppCompatActivity() {
 
                                 spinner.onItemSelectedListener = object :
                                     AdapterView.OnItemSelectedListener {
-                                    override fun onItemSelected(
-                                        parent: AdapterView<*>,
-                                        view: View, position: Int, id: Long
-                                    ) {
+                                    override fun onItemSelected(parent: AdapterView<*>,view: View, position: Int, id: Long) {
                                         tipo = types[position]
                                     }
-
                                     override fun onNothingSelected(parent: AdapterView<*>) {
                                     }
                                 }
@@ -131,7 +128,7 @@ class Ticket : AppCompatActivity() {
                                         }
                                     }
                                     override fun onFailure(call: Call<TicketOutputPost>, t: Throwable) {
-                                        Toast.makeText(this@Ticket, "Falha", Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(this@Ticket, "${t.message}", Toast.LENGTH_SHORT).show()
                                     }
                                 })
                             }
@@ -154,7 +151,7 @@ class Ticket : AppCompatActivity() {
                                         }
                                     }
                                     override fun onFailure(call: Call<TicketOutputPost>, t: Throwable) {
-                                        Toast.makeText(this@Ticket, "Falha", Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(this@Ticket, "${t.message}", Toast.LENGTH_SHORT).show()
                                     }
                                 })
                             }
@@ -164,7 +161,7 @@ class Ticket : AppCompatActivity() {
                 }
             }
             override fun onFailure(call: Call<List<Problema>>, t: Throwable) {
-                Toast.makeText(this@Ticket, "Falhou", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@Ticket, "${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }

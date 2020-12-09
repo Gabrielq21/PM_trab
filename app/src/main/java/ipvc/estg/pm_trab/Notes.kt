@@ -1,25 +1,24 @@
+package ipvc.estg.pm_trab
+
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import ipvc.estg.pm_trab.AddNote
-import ipvc.estg.pm_trab.R
-import ipvc.estg.pm_trab.UpdateNote
 import ipvc.estg.pm_trab.adapter.NoteAdapter
 import ipvc.estg.pm_trab.entity.Note
 import ipvc.estg.pm_trab.viewmodel.NoteViewModel
 import kotlinx.android.synthetic.main.activity_notes.*
 
-
 private lateinit var noteViewModel: NoteViewModel
+
 class Notes : AppCompatActivity(), NoteAdapter.OnItemClickListener{
 
     private val AddNoteRequestCode = 1

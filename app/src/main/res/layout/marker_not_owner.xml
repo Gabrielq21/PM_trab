@@ -10,6 +10,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
         android:hint="Descrição"
+        android:gravity="center"
+        android:textStyle="bold"
         android:inputType="textAutoComplete"
         android:textSize="18sp" />
     <TextView
@@ -26,6 +28,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
         android:hint="Latitude"
+        android:gravity="center"
+        android:textStyle="bold"
         android:inputType="textAutoComplete"
         android:textSize="18sp" />
     <TextView
@@ -42,6 +46,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
         android:hint="Longitude"
+        android:gravity="center"
+        android:textStyle="bold"
         android:inputType="textAutoComplete"
         android:textSize="18sp" />
 
@@ -59,6 +65,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
         android:hint="Tipo"
+        android:gravity="center"
+        android:textStyle="bold"
         android:inputType="textAutoComplete"
         android:textSize="18sp" />
 

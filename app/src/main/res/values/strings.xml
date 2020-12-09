@@ -4,6 +4,7 @@
     <string name="titulo">Titulo (Required)</string>
     <string name="texto">Texto (Required)</string>
     <string name="btnsave">Guardar</string>
+    <string name="btnremove">Remover</string>
     <string name="btnedit">Editar</string>
     <string name="update">Atualizar Nota</string>
     <string name="delete">Apagar tudo</string>
@@ -23,6 +24,11 @@
     <string name="shownoteslabel">Show Local Notes</string>
     <string name="createuserlabel">Criar User</string>
     <string name="logoutlabel">Logout</string>
+    <string name="LAT">Latitude</string>
+    <string name="LON">Latitude</string>
+    <string name="Tipo">Tipo</string>
+    <string name="edit_type">Editar o Tipo</string>
+    <string name="edit_local">Editar a Local</string>
 
 
     <string name="selected_item">Selected item:</string>

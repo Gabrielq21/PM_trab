@@ -1,102 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/ticket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="Descrição"
-        android:inputType="textAutoComplete"
-        android:textSize="18sp" />
+        android:gravity="center"
+        android:hint="@string/marker_texto"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425" />
+
     <EditText
         android:id="@+id/edit_ticket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="ticket"
-        android:inputType="textAutoComplete"
-        android:textSize="18sp" />
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="@+id/ticket"
+        app:layout_constraintTop_toTopOf="@+id/ticket" />
+
     <TextView
         android:id="@+id/latitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="Latitude"
-        android:inputType="textAutoComplete"
-        android:textSize="18sp" />
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:hint="@string/LAT"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/edit_ticket"
+        app:layout_constraintTop_toTopOf="@+id/edit_ticket" />
+
     <TextView
         android:id="@+id/edit_lat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="ticket"
-        android:inputType="textAutoComplete"
-        android:textSize="18sp" />
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/latitude"
+        app:layout_constraintTop_toTopOf="@+id/latitude" />
+
     <TextView
         android:id="@+id/longitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="Longitude"
-        android:inputType="textAutoComplete"
-        android:textSize="18sp" />
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:hint="@string/LON"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/edit_lat"
+        app:layout_constraintTop_toTopOf="@+id/edit_lat" />
+
     <TextView
         android:id="@+id/edit_lon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="ticket"
-        android:inputType="textAutoComplete"
-        android:textSize="18sp" />
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/longitude"
+        app:layout_constraintTop_toTopOf="@+id/longitude" />
+
     <TextView
         android:id="@+id/tipo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="Tipo"
-        android:inputType="textAutoComplete"
-        android:textSize="18sp" />
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:hint="@string/Tipo"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/edit_lon"
+        app:layout_constraintTop_toTopOf="@+id/edit_lon" />
+
     <TextView
         android:id="@+id/edit_tipo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:hint="Tipo"
-        android:inputType="textAutoComplete"
-        android:textSize="18sp" />
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/tipo"
+        app:layout_constraintTop_toTopOf="@+id/tipo" />
+
     <Spinner
         android:id="@+id/spinner1"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"/>
-    <Button
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@+id/edit_tipo"
+        app:layout_constraintTop_toTopOf="@+id/edit_tipo" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_type"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="change the type"
-        android:background="@color/purple_700"/>
-    <Button
+        android:layout_marginTop="48dp"
+        android:background="@color/purple_700"
+        android:src="@drawable/ic_baseline_edit_attributes_24"
+        android:text="@string/edit_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner1" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_local"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="change the local"
-        android:background="@color/purple_700"/>
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/purple_700"
+        android:src="@drawable/ic_baseline_edit_location_24"
+        android:text="@string/edit_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner1" />
 
     <Button
         android:id="@+id/button_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnsave"
-        android:background="@color/design_default_color_primary"/>
+        android:layout_marginBottom="49dp"
+        android:background="@color/purple_500"
+        android:text="@string/btnedit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.996" />
+
     <Button
         android:id="@+id/button_remove"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="delete"
-        android:background="@color/purple_700"/>
-</LinearLayout>
+        android:layout_marginBottom="1dp"
+        android:background="@color/purple_700"
+        android:text="@string/btnremove"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

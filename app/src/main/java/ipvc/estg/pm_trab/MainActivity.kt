@@ -1,6 +1,5 @@
 package ipvc.estg.pm_trab
 
-import Notes
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
