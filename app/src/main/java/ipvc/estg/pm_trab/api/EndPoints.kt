@@ -16,9 +16,9 @@ interface EndPoints {
     @POST("myslim/api/ticket/create")
     fun create(@Field("username") username: String, @Field("tipo") tipo: String, @Field("texto") texto: Editable, @Field("lat") lat: String, @Field("lon") lon: String): Call<TicketOutputPost>
     @GET("/myslim/api/markers")
-    fun getMarkers(): Call<List<Ticket>>
+    fun getMarkers(): Call<List<Problema>>
     @GET("/myslim/api/select/{id}")
-    fun getMarker(@Path("id") id: Int): Call<List<Ticket>>
+    fun getMarker(@Path("id") id: Int): Call<List<Problema>>
     @FormUrlEncoded
     @POST("myslim/api/ticket/update")
     fun updateMarker(@Field("id") id: Int?, @Field("tipo") tipo: String, @Field("texto") texto: String, @Field("lat") lat: String, @Field("lon") lon: String): Call<TicketOutputPost>

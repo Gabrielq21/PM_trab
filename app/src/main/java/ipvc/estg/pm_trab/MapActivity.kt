@@ -19,8 +19,8 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import ipvc.estg.pm_trab.api.EndPoints
+import ipvc.estg.pm_trab.api.Problema
 import ipvc.estg.pm_trab.api.ServiceBuilder
-import ipvc.estg.pm_trab.api.Ticket
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -47,8 +47,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         val call = request.getMarkers()
         var position: LatLng
 
-        call.enqueue(object : Callback<List<Ticket>> {
-            override fun onResponse(call: Call<List<Ticket>>, response: Response<List<Ticket>>) {
+        call.enqueue(object : Callback<List<Problema>> {
+            override fun onResponse(call: Call<List<Problema>>, response: Response<List<Problema>>) {
                 if (response.isSuccessful) {
                     val c = response.body()!!
 
@@ -60,7 +60,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                 }
             }
 
-            override fun onFailure(call: Call<List<Ticket>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Problema>>, t: Throwable) {
             }
         })
     }
@@ -80,12 +80,11 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         setUpMap()
         mMap.setOnMarkerClickListener( object: GoogleMap.OnMarkerClickListener {
             override fun onMarkerClick(p0: Marker): Boolean {
-
-                val intent = Intent(this@MapActivity, ticket::class.java)
                 setUpMap()
-                intent.putExtra(ticket.EXTRA_LAT, latitude)
-                intent.putExtra(ticket.EXTRA_LON, longitude)
-                intent.putExtra(ticket.EXTRA_MSG, p0.tag.toString())
+                val intent = Intent(this@MapActivity, Ticket::class.java)
+                intent.putExtra(Ticket.EXTRA_LAT, latitude)
+                intent.putExtra(Ticket.EXTRA_LON, longitude)
+                intent.putExtra(Ticket.EXTRA_MSG, p0.tag.toString())
                 startActivity(intent)
                 return false
             }
@@ -117,9 +116,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         return when (item.itemId) {
             R.id.new_marker_btn -> {
                 setUpMap()
-                val intent = Intent(this, addmarker::class.java)
-                intent.putExtra(addmarker.EXTRA_LAT, latitude)
-                intent.putExtra(addmarker.EXTRA_LON, longitude)
+                val intent = Intent(this, AddMarker::class.java)
+                intent.putExtra(AddMarker.EXTRA_LAT, latitude)
+                intent.putExtra(AddMarker.EXTRA_LON, longitude)
                 startActivity(intent)
                 true
             }

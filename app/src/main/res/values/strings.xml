@@ -16,10 +16,13 @@
     <string name="logincorrectlabel">Login Successful</string>
     <string name="markerincorrectlabel">Marker Inserido</string>
     <string name="markercorrectlabel">Marker Inserido</string>
-
-
-
-
+    <string name="marker_texto">Descrição do Problema</string>
+    <string name="usernamelabel">Username</string>
+    <string name="passwordlabel">Password</string>
+    <string name="loginlabel">Login</string>
+    <string name="shownoteslabel">Show Local Notes</string>
+    <string name="createuserlabel">Criar User</string>
+    <string name="logoutlabel">Logout</string>
 
 
     <string name="selected_item">Selected item:</string>

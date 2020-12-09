@@ -89,11 +89,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun show_notes() {
+    fun show_notes(view: View) {
         val intent = Intent( this, Notes::class.java )
         startActivity(intent)
     }
-    fun create_user() {
+    fun create_user(view: View) {
         val username = usernameEditTextView.text.toString()
         val password = passwordEditTextView.text.toString().sha256()
 

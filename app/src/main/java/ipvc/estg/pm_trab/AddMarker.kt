@@ -14,7 +14,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class addmarker : AppCompatActivity() {
+class AddMarker : AppCompatActivity() {
 
     private lateinit var createmarkerView: EditText
 
@@ -64,15 +64,15 @@ class addmarker : AppCompatActivity() {
                     if (response.isSuccessful) {
                         val c: TicketOutputPost = response.body()!!
                         if (c.success) {
-                            Toast.makeText(this@addmarker,R.string.markercorrectlabel, Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this@addmarker, MapActivity::class.java)
+                            Toast.makeText(this@AddMarker,R.string.markercorrectlabel, Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this@AddMarker, MapActivity::class.java)
                             startActivity(intent)
                             finish()
-                        } else Toast.makeText(this@addmarker,R.string.markerincorrectlabel, Toast.LENGTH_SHORT).show()
+                        } else Toast.makeText(this@AddMarker,R.string.markerincorrectlabel, Toast.LENGTH_SHORT).show()
                     }
                 }
                 override fun onFailure(call: Call<TicketOutputPost>, t: Throwable) {
-                    Toast.makeText(this@addmarker, "${t.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@AddMarker, "${t.message}", Toast.LENGTH_SHORT).show()
                 }
             })
             finish()

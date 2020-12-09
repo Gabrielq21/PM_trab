@@ -9,7 +9,7 @@ data class LoginOutputPost(
 data class TicketOutputPost(
     val success: Boolean
 )
-data class Ticket(
+data class Problema(
     val id: Int,
     val texto: String,
     val foto: String,
