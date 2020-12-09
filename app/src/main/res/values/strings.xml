@@ -1,12 +1,20 @@
 <resources>
     <string name="app_name">pm_trab</string>
     <string name="title_activity_add_note">AddNote</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="titulo">Titulo (Required)</string>
+    <string name="texto">Texto (Required)</string>
+    <string name="btnsave">Guardar</string>
+    <string name="btnedit">Editar</string>
+    <string name="update">Atualizar Nota</string>
+    <string name="delete">Apagar tudo</string>
+    <string name="preference_file_key" translatable="false">preference_file_key</string>
+    <string name="automatic_login_check" translatable="false">automatic_login_check</string>
+    <string name="automatic_login_username" translatable="false">automatic_login_username</string>
+    <string name="fieldusernameemptylabel">Parameter Username is Empty</string>
+    <string name="fieldpasswordemptylabel">Parameter Password is Empty</string>
+    <string name="loginincorrectlabel">Login Failed</string>
+    <string name="logincorrectlabel">Login Successful</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
 </resources>
